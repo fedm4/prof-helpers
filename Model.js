@@ -4,7 +4,7 @@
  */
 export default class Model{
   constructor(model) {
-    this.model = model;'
+    this.model = model;
     this.modelData = {};
   }
   create() {
