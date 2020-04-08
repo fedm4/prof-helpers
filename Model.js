@@ -3,21 +3,13 @@
  * expose basic crud operations.
  */
 export default class Model{
-  constructor(db) {
-    super();
-    this.table = table;
+  constructor(model) {
+    this.model = model;'
+    this.modelData = {};
   }
-
-  static init(data, table, sequelize) {
-    return super.init(
-      data,
-      {
-        tableName: table,
-        sequelize
-      }
-    );
+  create() {
+    this.model.build(this.modelData);
   }
-
   save() {
     //do something
   }
