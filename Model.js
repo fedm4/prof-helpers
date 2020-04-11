@@ -5,7 +5,7 @@
 export default class Model{
   constructor(model) {
     this.model = model;
-    this.modelData = {};
+    this._modelData = {};
 
     // set Hidden Fields
     this.hiddenFields = this.hiddenFields || [];
@@ -22,6 +22,10 @@ export default class Model{
       }
     }
     return ret;
+  }
+
+  set modelData(data) {
+    this._modelData = data;   
   }
 
   async create() {
