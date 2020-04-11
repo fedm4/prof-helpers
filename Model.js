@@ -3,12 +3,12 @@
  * expose basic crud operations.
  */
 export default class Model{
-  constructor(model, {hiddenFields}) {
+  constructor(model) {
     this.model = model;
     this.modelData = {};
 
     // set Hidden Fields
-    this.hiddenFields = hiddenFields || [];
+    this.hiddenFields = this.hiddenFields || [];
   }
 
   /**
