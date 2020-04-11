@@ -16,7 +16,7 @@ export default class Model{
    */
   get modelData() {
     const ret = {};
-    for(let key in Object.keys(this._modelData)) {
+    for(let key of Object.keys(this._modelData)) {
       if(this.hiddenFields.indexOf(key) === -1) {
         ret[key] = this._modelData[key];
       }
