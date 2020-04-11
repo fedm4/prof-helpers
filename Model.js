@@ -3,13 +3,19 @@
  * expose basic crud operations.
  */
 export default class Model{
-  constructor(model) {
-    this.model = model;
+  constructor(model, {db}) {
+    this.setModel(model, db);
     this._modelData = {};
 
     // set Hidden Fields
     this.hiddenFields = this.hiddenFields || [];
   }
+
+
+  async setModel(model) {
+    this.model = await model(db);
+    console.log(this.model);
+  } 
 
   /**
    * Standarized getter for modelData
