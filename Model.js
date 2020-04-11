@@ -29,7 +29,7 @@ export default class Model{
   }
 
   async create() {
-    this.modelData = await this.model.build(this.modelData);
+    this.modelData = await this.model.build(this._modelData);
   }
   save() {
     //do something
