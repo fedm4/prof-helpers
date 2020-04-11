@@ -24,8 +24,8 @@ export default class Model{
     return ret;
   }
 
-  create() {
-    this.model.build(this.modelData);
+  async create() {
+    this.modelData = await this.model.build(this.modelData);
   }
   save() {
     //do something
