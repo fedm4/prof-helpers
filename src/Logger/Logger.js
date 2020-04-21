@@ -1,4 +1,4 @@
-import {initTracer as initJaegerTracer} from 'jaeger-client';
+import client from 'jaeger-client';
 
 const initTracer = (serviceName) => {
   const config = {
@@ -21,7 +21,7 @@ const initTracer = (serviceName) => {
       },
     },
   };
-  return initJaegerTracer(config, options);
+  return client.initTracer(config, options);
 };
 
 export default initTracer;
