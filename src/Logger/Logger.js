@@ -1,4 +1,4 @@
-const initJaegerTracer = require("jaeger-client").initTracer;
+import {initTracer as initJaegerTracer} from 'jaeger-client';
 
 const initTracer = (serviceName) => {
   const config = {
