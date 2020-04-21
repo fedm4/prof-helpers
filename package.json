@@ -1,8 +1,10 @@
 {
-  "name": "models",
+  "name": "prof-helpers",
   "version": "1.0.0",
-  "main": "Model.js",
+  "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "dependencies": {}
+  "dependencies": {
+    "jaeger-client": "^3.17.2"
+  }
 }
